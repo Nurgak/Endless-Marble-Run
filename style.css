@@ -1,0 +1,15 @@
+html, body {
+  margin: 0;
+  padding: 0;
+}
+canvas {
+  display: block;
+}
+.p5Label p {
+  color: white;
+  display: block;
+  position:absolute;
+  bottom: 0;
+  padding: 0;
+  margin: 0;
+}
