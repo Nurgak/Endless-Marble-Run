@@ -15,7 +15,7 @@ One limitation is that the cubes cannot be traversed more than once, which would
 
 ## Usage
 
-Either view the animation in the [p5js editor](https://editor.p5js.org/Nurgak/sketches/ouF7jUx_3) or clone the repository and run locally.
+Either [view the animation on GitHub pages](https://nurgak.github.io/Endless-Marble-Run/), edit the code in the [p5js editor](https://editor.p5js.org/Nurgak/sketches/ouF7jUx_3) or clone the repository and run locally.
 
 Click on the canvas to switch between following mode and first-person-view mode.
 
