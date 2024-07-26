@@ -2,7 +2,7 @@
 
 # Endless Marble Run
 
-<iframe src="https://editor.p5js.org/Nurgak/full/ouF7jUx_3" width="100%" height="300"></iframe>
+https://github.com/user-attachments/assets/ff9e48dc-4ef2-4600-8268-6010505a631b
 
 This repository hosts the script and assets for the *Endless Marble Run*: a 3D simulation of modular blocks genearting an infinite marble run, similar to [CUBORO™ marble run system](https://cuboro.ch), using the [p5js library](https://p5js.org/).
 
