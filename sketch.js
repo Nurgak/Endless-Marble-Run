@@ -26,7 +26,7 @@ class Camera {
     this.#cameraAngleRotation = rotationSpeed;
     this.#camOffset = offset;
     this.#mode = Camera.MODE_FOLLOW;
-    this.setFrustrum();
+    this.setPerspective();
   }
 
   setTarget(target) {
@@ -51,21 +51,16 @@ class Camera {
     return this.#mode;
   }
 
-  setFrustrum() {
+  setPerspective() {
     let near = 1;
-    let frustrumSize = 2048;
+    let far = 50;
+    let fov = Math.PI / 4;
     if (this.#mode == Camera.MODE_BALL) {
       near = 0.01;
-      frustrumSize = 16384;
+      far = 10;
+      fov = Math.PI / 1.15;
     }
-    this.#cam.frustum(
-      -width / frustrumSize,
-      width / frustrumSize,
-      -height / frustrumSize,
-      height / frustrumSize,
-      near,
-      100
-    );
+    perspective(fov, width / height, near, far);
     return this;
   }
 
@@ -335,7 +330,7 @@ function setup() {
   );
 
   canvas.mouseClicked((randomColor) => {
-    cam.setToggleMode().setFrustrum();
+    cam.setToggleMode().setPerspective();
   });
 }
 
@@ -383,10 +378,10 @@ function draw() {
 
 function doubleClicked() {
   fullscreen(!fullscreen());
-  cam.setFrustrum();
+  cam.setPerspective();
 }
 
 function windowResized() {
   resizeCanvas(windowWidth, windowHeight);
-  cam.setFrustrum();
+  cam.setPerspective();
 }
