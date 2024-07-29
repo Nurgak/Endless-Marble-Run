@@ -208,7 +208,7 @@ class World {
     return this;
   }
 
-  getBallPosition(index) {
+  getBall(index) {
     return this.#balls[index];
   }
 
@@ -324,7 +324,7 @@ function setup() {
   world = new World(FunnelRampA, debug).addBall(0.3, 0.2, 1);
 
   cam = new Camera(createVector(7, 7, 7), 0.001).setTarget(
-    world.getBallPosition(0)
+    world.getBall(0)
   );
 
   canvas.mouseClicked((randomColor) => {
