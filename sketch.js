@@ -108,16 +108,14 @@ class World {
   #balls;
   #boxes;
   #exitList;
-  #initialBoxType;
   #debug;
 
   constructor(initialBoxType, debug = false) {
-    this.#initialBoxType = initialBoxType;
     this.#balls = [];
     this.#boxes = [];
     this.#exitList = [];
     this.#debug = debug;
-    this.createBox(this.#initialBoxType);
+    this.createBox(initialBoxType);
   }
 
   addBall(x, y, z) {
